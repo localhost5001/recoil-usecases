@@ -19,8 +19,7 @@ const UserForm = () => {
                     id={emailId}
                     value={user.email}
                     onChange={(e) => setUser({ ...user, email: e.target.value })}
-                    className="w-full shadow-md p-1 border-gray-300 rounded-lg" 
-                    placeholder="name@flowbite.com" 
+                    className="w-full shadow-md p-1 border-gray-300 rounded-lg"  
                 />
             </div>
 
@@ -33,8 +32,7 @@ const UserForm = () => {
                     id={nameId}
                     value={user.name}
                     onChange={(e) => setUser({ ...user, name: e.target.value })}
-                    className="w-full shadow-md p-1 border-gray-300 rounded-lg" 
-                    placeholder="name@flowbite.com" 
+                    className="w-full shadow-md p-1 border-gray-300 rounded-lg"  
                 />
              </div>
         </div>
