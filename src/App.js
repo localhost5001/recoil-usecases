@@ -1,11 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import './App.css'
+
+const Home = lazy(() => import('./views/home'))
+const SimpleAtom = lazy(() => import('./views/simpleAtom'))
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Routes>
+      <Route path='/' element={
+          <Suspense> 
+            <Home /> 
+          </Suspense>
+        } 
+      />
+      <Route path='/simple-atom' element={
+          <Suspense> 
+            <SimpleAtom /> 
+          </Suspense>
+        } 
+      />
+    </Routes>
   );
 }
 
