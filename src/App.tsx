@@ -1,6 +1,5 @@
 import { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import './App.css'
 
 const Home = lazy(() => import('./views/home'))
 const SimpleAtom = lazy(() => import('./views/simpleAtom'))
